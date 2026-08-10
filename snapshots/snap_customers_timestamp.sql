@@ -8,7 +8,7 @@
  invalidate_hard_deletes=True
  )
 }}
-select * 
+select *, {{macro_amount('spent')}} as spent_percentage
 from {{source('datafeed_shared_schema','customers')}}
 
 {% endsnapshot %}
